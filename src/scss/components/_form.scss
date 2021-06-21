@@ -9,12 +9,12 @@
 	color: v.$neutral-light;
 	background: linear-gradient(
 			0deg,
-			rgba(245, 92, 101, 0.85),
-			rgba(245, 92, 101, 0.85)
+			rgba(245, 92, 101, 0.9),
+			rgba(245, 92, 101, 0.9)
 		),
-		url("../../assets/stats.jpg"); //temp, change image
+		url("../../assets/footer/form.jpg");
 	background-size: cover;
-	//background-position: center;
+	background-position: center;
 
 	form {
 		width: 100%;

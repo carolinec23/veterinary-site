@@ -1,3 +1,4 @@
+/* Colors */
 $neutral-light: #ffffff;
 $neutral-dark: #000000;
 $gray-light: #a1a1a1;
@@ -7,8 +8,17 @@ $orange: #fa714b;
 $yellow: #faae43;
 $purple: #9e71b8;
 
+/* Font */
 $font-primary: "Roboto";
 //$font-secondary: '';
 $font-backup: "sans-serif";
 
+/* Breakpoints */
+$media-xs: 480px;
+$media-sm: 768px;
+$media-md: 1024px;
+$media-lg: 1280px;
+$media-xl: 1440px;
+
+/* Transitions */
 $default-transition: all 0.3s ease-in-out;

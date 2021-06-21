@@ -1,5 +1,36 @@
+@use "./variables" as v;
+
 @mixin flex-center {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+/* Media Queries */
+
+@mixin xs {
+	@media screen and (min-width: v.$media-xs) {
+		@content;
+	}
+}
+
+@mixin sm {
+	@media screen and (min-width: v.$media-sm) {
+		@content;
+	}
+}
+@mixin md {
+	@media screen and (min-width: v.$media-md) {
+		@content;
+	}
+}
+@mixin lg {
+	@media screen and (min-width: v.$media-lg) {
+		@content;
+	}
+}
+@mixin xl {
+	@media screen and (min-width: v.$media-xl) {
+		@content;
+	}
 }
