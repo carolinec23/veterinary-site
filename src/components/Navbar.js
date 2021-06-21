@@ -1,7 +1,7 @@
 import React from 'react';
 import '../scss/layouts/_navbar.scss';
 import { FaSearch } from 'react-icons/fa';
-import { FaStethoscope } from 'react-icons/fa'; //temp
+import LogoImg from '../assets/logo.png';
 import { HiOutlinePhone, HiOutlineMail } from 'react-icons/hi';
 import { MdArrowDropDown } from 'react-icons/md';
 
@@ -21,9 +21,8 @@ const Navbar = () => {
                 </div>
                 <div className="navbar__content">
                     <div className="navbar__logo">
-                        <FaStethoscope />
-                        <img src="" alt="" />
-                        <h1>Veterinary</h1>
+                        <img src={LogoImg} alt="logo" />
+                        <h1>All Paws Veterinary</h1>
                     </div>
                     <div className="navbar__items">
                         <ul>
@@ -34,7 +33,7 @@ const Navbar = () => {
                             <li><a href="">Blog<MdArrowDropDown/></a></li>
                             <li><a href="">Shop<MdArrowDropDown/></a></li>
                             <li><a href="">Contact<MdArrowDropDown/></a></li>
-                            <li><i><FaSearch /></i></li>
+                            <li id="search__button"><i><FaSearch /></i></li>
                         </ul>
                     </div>
                 </div>

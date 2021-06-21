@@ -1,0 +1,41 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.accordion__container {
+	padding: 20px 0;
+}
+
+.accordionItem__title {
+	background-color: v.$yellow;
+	color: v.$neutral-light;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 2px 0;
+	padding: 14px 22px;
+
+	&:hover {
+		filter: brightness(105%);
+	}
+
+	&.active {
+		background-color: v.$red;
+	}
+
+	i {
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}
+
+.accordionItem__content {
+	display: none;
+	color: v.$gray-light;
+	padding: 12px 22px;
+	//add transition ??
+
+	&.active {
+		display: flex;
+	}
+}

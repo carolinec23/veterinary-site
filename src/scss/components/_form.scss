@@ -1,0 +1,80 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.form__container {
+	width: 100%;
+	padding: 20px 40px;
+	@include m.flex-center;
+	flex-direction: column;
+	color: v.$neutral-light;
+	background: linear-gradient(
+			0deg,
+			rgba(245, 92, 101, 0.85),
+			rgba(245, 92, 101, 0.85)
+		),
+		url("../../assets/stats.jpg"); //temp, change image
+	background-size: cover;
+	//background-position: center;
+
+	form {
+		width: 100%;
+		@include m.flex-center;
+		flex-direction: column;
+	}
+
+	fieldset {
+		width: 100%;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		border: none;
+	}
+}
+
+.form__wrapper {
+	@include m.flex-center;
+	flex-direction: column;
+	margin: 20px 12px;
+
+	input {
+		width: 100%;
+		padding: 8px 10px;
+		color: v.$neutral-light;
+		border: solid rgba(255, 255, 255, 0.4) 2px;
+		background: transparent;
+
+		&:focus {
+			outline: none;
+		}
+
+		&::placeholder {
+			color: v.$neutral-light;
+		}
+
+		&:nth-child(2) {
+			margin: 10px 0;
+		}
+	}
+
+	textarea {
+		height: 100%;
+		width: 100%;
+		padding: 8px 10px;
+		color: v.$neutral-light;
+		border: solid rgba(255, 255, 255, 0.4) 2px;
+		background: transparent;
+
+		&:focus {
+			outline: none;
+		}
+
+		&::placeholder {
+			color: v.$neutral-light;
+		}
+	}
+}
+
+.form__button {
+	background-color: rgba(255, 255, 255, 0.8);
+	color: v.$gray-dark;
+	border: none;
+}

@@ -1,0 +1,44 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.hero__container {
+	background-color: v.$purple;
+	background: radial-gradient(
+		circle,
+		rgba(255, 255, 255, 1) 0%,
+		rgba(158, 113, 184, 1) 45%,
+		rgba(89, 72, 116, 1) 100%
+	);
+	@include m.flex-center;
+}
+
+.hero__wrapper {
+	width: 70%;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+}
+
+.hero__header {
+	grid-column: span 2;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+
+	h1 {
+		color: v.$neutral-light;
+		font-size: 5em;
+		line-height: 0.8em;
+		margin-bottom: 0.4em;
+	}
+
+	h4 {
+		color: v.$red;
+		font-size: 2em;
+		font-weight: 400;
+	}
+}
+
+.hero__image {
+	grid-column: span 3;
+}

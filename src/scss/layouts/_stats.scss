@@ -1,0 +1,36 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.stats__container {
+	@include m.flex-center;
+	background: linear-gradient(
+			0deg,
+			rgba(250, 174, 67, 0.85),
+			rgba(250, 174, 67, 0.85)
+		),
+		url("../../assets/stats.jpg");
+	background-size: cover;
+	background-position: center;
+}
+
+.stats__wrapper {
+	width: 70%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 40px;
+}
+
+.stats__item {
+	@include m.flex-center;
+	flex-direction: column;
+	padding: 40px;
+
+	h1 {
+		font-size: 3em;
+	}
+
+	p {
+		color: v.$neutral-light;
+	}
+}

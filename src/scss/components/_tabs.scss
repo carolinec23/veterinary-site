@@ -1,0 +1,44 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.tabs__container {
+	padding: 20px 0;
+}
+
+.tabs__items {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.tabsItem__title {
+	padding: 14px 22px;
+	color: v.$gray-dark;
+
+	&.active {
+		background-color: v.$red;
+		color: v.$neutral-light;
+		border-bottom: solid 2px v.$red;
+	}
+
+	&:hover {
+		cursor: pointer;
+		border-bottom: solid 2px v.$red;
+	}
+}
+
+.tabsItem__content {
+	@include m.flex-center;
+	flex-direction: column;
+	color: v.$gray-light;
+
+	img {
+		width: 100%;
+		height: 200px;
+		object-fit: cover;
+	}
+
+	p {
+		padding: 18px 22px;
+	}
+}

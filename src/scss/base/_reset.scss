@@ -1,10 +1,11 @@
-/* https://github.com/andy-piccalilli/modern-css-reset */
+@use '../abstracts/variables' as v;
 
 /* Box sizing rules */
 *,
 *::before,
 *::after {
 	box-sizing: border-box;
+	font-family: v.$font-primary, v.$font-backup;
 }
 
 /* Remove default margin */
@@ -73,3 +74,5 @@ select {
 		scroll-behavior: auto !important;
 	}
 }
+
+/* https://github.com/andy-piccalilli/modern-css-reset */

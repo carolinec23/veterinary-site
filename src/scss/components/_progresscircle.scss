@@ -1,0 +1,46 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.circle__container {
+	text-align: center;
+}
+
+.circle__wrapper {
+	position: relative;
+
+	svg {
+		width: 200px;
+		height: 200px;
+
+		transform: rotate(-90deg);
+		overflow: initial;
+	}
+
+	circle {
+		stroke-width: 20px;
+		fill: none;
+	}
+
+	circle:nth-child(1) {
+		//stroke: #v.$neutral-light;
+	}
+	circle:nth-child(2) {
+		stroke: v.$red;
+		position: relative;
+		z-index: 1;
+		stroke-dashoffset: calc(100 * 6);
+		stroke-dasharray: calc(100 * 6);
+		stroke-linecap: round;
+	}
+}
+
+.circle__content {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+
+	p {
+		color: v.$neutral-light;
+	}
+}

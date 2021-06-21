@@ -1,0 +1,40 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.services__container {
+	@include m.flex-center;
+}
+
+.services__wrapper {
+	margin-top: -50px;
+	max-width: 70%;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.services__item {
+	grid-column: span 1;
+	background-size: cover;
+	background-position: center;
+}
+
+.services__itemContent {
+	@include m.flex-center;
+	flex-direction: column;
+	padding: 2.4em 3em;
+	text-align: center;
+
+	h4 {
+		color: v.$gray-dark;
+	}
+
+	h2,
+	p {
+		color: v.$neutral-light;
+		margin-bottom: 1em;
+	}
+
+	button {
+		margin-top: 1em;
+	}
+}

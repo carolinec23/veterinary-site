@@ -1,0 +1,15 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.slider__item {
+	@include m.flex-center;
+	flex-direction: column;
+	width: 100%;
+	height: 200px;
+
+	img {
+		//width: 100%;
+		//height: 100%;
+		//object-fit: cover;
+	}
+}
