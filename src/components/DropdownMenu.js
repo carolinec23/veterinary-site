@@ -17,13 +17,13 @@ const DropdownMenu = ({ isOpen, toggle }) => {
            <div className="dropdownmenu__wrapper">
                <div className="dropdownmenu__items">
                     <ul>
-                        <li><a href="">Home</a></li>
-                        <li><a href="">Pages</a></li>
-                        <li><a href="">Features</a></li>
-                        <li><a href="">Gallery</a></li>
-                        <li><a href="">Blog</a></li>
-                        <li><a href="">Shop</a></li>
-                        <li><a href="">Contact</a></li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/">Pages</a></li>
+                        <li><a href="/">Features</a></li>
+                        <li><a href="/">Gallery</a></li>
+                        <li><a href="/">Blog</a></li>
+                        <li><a href="/">Shop</a></li>
+                        <li><a href="/">Contact</a></li>
                     </ul>
                </div>
                <div className="dropdownmenu__infoItem">

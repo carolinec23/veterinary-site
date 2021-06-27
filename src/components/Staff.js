@@ -4,7 +4,7 @@ import "../scss/layouts/_staff.scss";
 const Staff = ({ items }) => {
     const renderedItems = items.map(item => {
         return (
-            <div className="staff__item">
+            <div className="staff__item" key={item.name}>
                 <div className="staffItem__image">
                     <img src={item.img} alt={item.name} />
                 </div>

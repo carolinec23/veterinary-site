@@ -18,15 +18,15 @@ const Accordion = ({ items }) => {
         const icon = index === activeIndex ? <AiOutlineMinus /> : <AiOutlinePlus />;
 
         return (
-            <>
-                <div className={`accordionItem__title ${active}`} onClick={() => onTitleClick(index)}>
+            <div key={item.title}>
+                <div className={`accordionItem__title ${active}`} onClick={() => onTitleClick(index)} >
                     {item.title}
                     <i>{icon}</i>
                 </div>
                 <div className={`accordionItem__content ${active}`} >
                     <p>{item.content}</p>
                 </div>
-            </>
+            </div>
         )
     });
 

@@ -5,7 +5,7 @@ import VetImg from "../assets/benefits/vet.png";
 const Benefits = ({ items }) => {
     const renderedItems = items.map(item => {
         return (
-            <div className="benefits__item">
+            <div className="benefits__item" key={item.title}>
                 <i>{item.icon}</i>
                 <div className="benefits__itemText">
                     <h3>{item.title}</h3>

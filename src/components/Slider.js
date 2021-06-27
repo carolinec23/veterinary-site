@@ -6,8 +6,8 @@ import 'react-multi-carousel/lib/styles.css';
 const Slider = (props) => {
     const renderedSlides = props.slides.map(image => {
         return (
-            <div>
-                <img className="slider__itemImage" src={image.url} alt={image.alt} />
+            <div key={image.url}>
+                <img className="slider__itemImage" src={image.url} alt={image.alt} key={image.url}/>
             </div>
         )
     })

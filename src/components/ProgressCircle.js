@@ -5,7 +5,7 @@ const ProgressCircle = ({percentage, label}) => {
     const style = {strokeDashoffset: ((100 * 6) - ((100 * 6) * percentage) / 100)};
 
     return (
-        <div class="circle__container">
+        <div className="circle__container">
             <div className="circle__wrapper">
             	<svg>
             		<circle cx="100" cy="100" r="95"/>

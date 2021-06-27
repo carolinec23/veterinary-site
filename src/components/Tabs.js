@@ -12,7 +12,7 @@ const Tabs = ({ items }) => {
         const active = index === activeIndex ? 'active' : '';
 
         return (
-            <div className={`tabsItem__title ${active}`} onClick={() => onTitleClick(index)}>
+            <div className={`tabsItem__title ${active}`} onClick={() => onTitleClick(index)} key={item.title}>
                 {item.title}
             </div>
         )

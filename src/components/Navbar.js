@@ -27,12 +27,12 @@ const Navbar = ({ toggle }) => {
                     </div>
                     <div className="navbar__items">
                         <ul>
-                            <li><a href="">Home<MdArrowDropDown/></a></li>
-                            <li><a href="">Features<MdArrowDropDown/></a></li>
-                            <li><a href="">Gallery<MdArrowDropDown/></a></li>
-                            <li><a href="">Blog<MdArrowDropDown/></a></li>
-                            <li><a href="">Shop<MdArrowDropDown/></a></li>
-                            <li><a href="">Contact<MdArrowDropDown/></a></li>
+                            <li><a href="/">Home<MdArrowDropDown/></a></li>
+                            <li><a href="/">Features<MdArrowDropDown/></a></li>
+                            <li><a href="/">Gallery<MdArrowDropDown/></a></li>
+                            <li><a href="/">Blog<MdArrowDropDown/></a></li>
+                            <li><a href="/">Shop<MdArrowDropDown/></a></li>
+                            <li><a href="/">Contact<MdArrowDropDown/></a></li>
                             <li id="search__button"><i><FaSearch /></i></li>
                         </ul>
                     </div>
