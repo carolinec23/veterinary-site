@@ -1,0 +1,72 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.dropdownmenu__container {
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+	height: 100vh;
+	background: v.$neutral-light;
+	top: 0;
+	left: 0;
+	transition: v.$default-transition;
+
+	i {
+		color: v.$red;
+	}
+}
+
+.dropdownmenu__close {
+	position: absolute;
+	top: 1.2rem;
+	right: 1.5rem;
+	background: transparent;
+	cursor: pointer;
+	outline: none;
+	transition: v.$default-transition;
+
+	&:hover {
+		transform: scale(1.1);
+	}
+}
+
+.dropdownmenu__wrapper {
+	margin-top: 60px;
+	@include m.flex-center;
+	flex-direction: column;
+}
+
+.dropdownmenu__items {
+	margin: 20px 0;
+
+	ul {
+		padding: 0;
+		@include m.flex-center;
+		flex-direction: column;
+		list-style: none;
+	}
+
+	li {
+		margin: 8px 0;
+	}
+
+	a {
+		text-decoration: none;
+		color: v.$gray-dark;
+		transition: v.$default-transition;
+
+		&:hover {
+			color: v.$orange;
+		}
+	}
+}
+
+.dropdownmenu__infoItem {
+	@include m.flex-center;
+	font-size: 0.8em;
+
+	p {
+		color: v.$gray-light;
+		margin-left: 0.6em;
+	}
+}

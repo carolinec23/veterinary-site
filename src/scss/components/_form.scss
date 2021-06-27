@@ -3,7 +3,7 @@
 
 .form__container {
 	width: 100%;
-	padding: 20px 40px;
+	padding: 18px 0;
 	@include m.flex-center;
 	flex-direction: column;
 	color: v.$neutral-light;
@@ -24,16 +24,32 @@
 
 	fieldset {
 		width: 100%;
-		display: grid;
-		grid-template-columns: 1fr 1fr;
+		@include m.flex-center;
+		flex-direction: column;
 		border: none;
+	}
+
+	@include m.xs {
+		padding: 20px;
+	}
+
+	@include m.sm {
+		fieldset {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+
+	@include m.md {
+		padding: 20px 40px;
 	}
 }
 
 .form__wrapper {
+	width: 100%;
 	@include m.flex-center;
 	flex-direction: column;
-	margin: 20px 12px;
+	margin: 0 16px;
 
 	input {
 		width: 100%;
@@ -41,14 +57,6 @@
 		color: v.$neutral-light;
 		border: solid rgba(255, 255, 255, 0.4) 2px;
 		background: transparent;
-
-		&:focus {
-			outline: none;
-		}
-
-		&::placeholder {
-			color: v.$neutral-light;
-		}
 
 		&:nth-child(2) {
 			margin: 10px 0;
@@ -62,13 +70,35 @@
 		color: v.$neutral-light;
 		border: solid rgba(255, 255, 255, 0.4) 2px;
 		background: transparent;
+		margin-top: 10px;
+	}
 
+	input,
+	textarea {
 		&:focus {
 			outline: none;
+			background-color: rgba(255, 255, 255, 0.15);
 		}
 
 		&::placeholder {
 			color: v.$neutral-light;
+		}
+	}
+
+	@include m.sm {
+		height: 100%;
+		padding: 20px 10px;
+		justify-content: space-between;
+		margin: 20px 0px;
+
+		input {
+			&:nth-child(2) {
+				margin: 0;
+			}
+		}
+
+		textarea {
+			margin-top: 0;
 		}
 	}
 }
@@ -77,4 +107,9 @@
 	background-color: rgba(255, 255, 255, 0.8);
 	color: v.$gray-dark;
 	border: none;
+	margin-top: 12px;
+
+	@include m.sm {
+		margin-top: 0;
+	}
 }

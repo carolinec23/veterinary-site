@@ -2,6 +2,7 @@
 @use '../abstracts/mixins' as m;
 
 .accordion__container {
+	width: 100%;
 	padding: 20px 0;
 }
 
@@ -23,6 +24,9 @@
 	}
 
 	i {
+		margin-left: 6px;
+		@include m.flex-center;
+
 		&:hover {
 			cursor: pointer;
 		}
@@ -32,10 +36,18 @@
 .accordionItem__content {
 	display: none;
 	color: v.$gray-light;
-	padding: 12px 22px;
-	//add transition ??
+	padding: 10px 14px;
+	text-align: justify;
 
 	&.active {
 		display: flex;
+	}
+
+	@include m.sm {
+		padding: 14px 18px;
+	}
+
+	@include m.md {
+		padding: 18px 22px;
 	}
 }

@@ -10,9 +10,9 @@ export const StaffData = [
         occupation: "Animal Welfare"
     },
     {
-        name: "Dr. Alexander Hoskins",
+        name: "Dr. Ishaan Hoskins",
         img: Image2,
-        occupation: "Emergency and Critical Care"
+        occupation: "Emergency & Critical Care"
     },
     {
         name: "Dr. John Chapman",

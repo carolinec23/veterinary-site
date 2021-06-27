@@ -19,8 +19,10 @@ const Benefits = ({ items }) => {
         <div className="benefits__container">
             <div className="benefits__wrapper">
                 <div className="benefits__content">
-                    <h1>Why Choose Us?</h1>
-                    <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia culpa temporibus eum vel laudantium!</h3>
+                    <div className="benefits__header">
+                        <h1>Why Choose Us?</h1>
+                        <h3 id="">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia culpa temporibus eum vel laudantium!</h3>
+                    </div>
                     <div className="benefits__items">
                         {renderedItems}
                     </div>

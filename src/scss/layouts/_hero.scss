@@ -13,32 +13,82 @@
 }
 
 .hero__wrapper {
-	width: 70%;
-	display: grid;
-	grid-template-columns: repeat(5, 1fr);
+	@include m.flex-center;
+	flex-direction: column;
+	padding-top: 20px;
+
+	@include m.sm {
+		padding-top: 0;
+		width: 70%;
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+	}
 }
 
 .hero__header {
-	grid-column: span 2;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: flex-start;
+	align-items: center;
 
 	h1 {
 		color: v.$neutral-light;
-		font-size: 5em;
 		line-height: 0.8em;
 		margin-bottom: 0.4em;
 	}
 
 	h4 {
 		color: v.$red;
-		font-size: 2em;
 		font-weight: 400;
+	}
+
+	@include m.xs {
+		h1 {
+			font-size: 2.6em;
+		}
+		h4 {
+			font-size: 1.4em;
+		}
+	}
+
+	@include m.sm {
+		grid-column: span 2;
+		align-items: flex-start;
+		margin-bottom: 20px;
+
+		h1 {
+			font-size: 3.4em;
+		}
+	}
+
+	@include m.md {
+		h1 {
+			font-size: 4.2em;
+		}
+		h4 {
+			font-size: 1.8em;
+		}
+	}
+
+	@include m.lg {
+		h1 {
+			font-size: 5em;
+		}
+		h4 {
+			font-size: 2em;
+		}
 	}
 }
 
 .hero__image {
-	grid-column: span 3;
+	max-width: 80%;
+
+	@include m.xs {
+		max-width: 60%;
+	}
+
+	@include m.sm {
+		max-width: 100%;
+		grid-column: span 3;
+	}
 }

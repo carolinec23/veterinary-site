@@ -3,20 +3,58 @@
 
 .twoColumns__container {
 	@include m.flex-center;
-	margin: 60px 0;
+	margin: 30px 0;
+
+	@include m.sm {
+		margin: 60px 0;
+	}
 }
 
 .twoColumns__wrapper {
-	max-width: 70%;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-gap: 50px;
+	@include m.flex-center;
+	flex-direction: column;
+	max-width: 85%;
+	overflow: hidden;
+
+	@include m.xs {
+		max-width: 80%;
+	}
+
+	@include m.sm {
+		width: 100%;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 30px;
+	}
+
+	@include m.md {
+		max-width: 85%;
+		grid-gap: 50px;
+	}
+
+	@include m.lg {
+		max-width: 80%;
+		grid-gap: 60px;
+	}
+
+	@include m.xl {
+		max-width: 70%;
+	}
 }
 
 .twoColumns__column {
-	grid-column: span 1;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 
 	h2 {
 		color: v.$gray-dark;
+	}
+
+	@include m.sm {
+		grid-column: span 1;
+		align-items: flex-start;
 	}
 }

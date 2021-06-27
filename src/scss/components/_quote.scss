@@ -6,8 +6,8 @@
 }
 
 .quote__content {
-	max-width: 40%;
-	margin: 40px 0;
+	max-width: 85%;
+	margin: 20px 0;
 	@include m.flex-center;
 	flex-direction: column;
 	text-align: center;
@@ -15,15 +15,26 @@
 	i {
 		color: v.$red;
 		margin: 8px 0;
-		font-size: 1.8em;
 	}
 
 	h3 {
-		font-size: 1.8em;
 		font-style: italic;
 	}
 
 	p {
 		color: v.$gray-light;
+	}
+
+	@include m.xs {
+		max-width: 60%;
+	}
+
+	@include m.sm {
+		max-width: 40%;
+		margin: 40px 0;
+	}
+
+	@include m.lg {
+		max-width: 30%;
 	}
 }

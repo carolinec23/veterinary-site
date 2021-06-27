@@ -5,7 +5,7 @@
 *::before,
 *::after {
 	box-sizing: border-box;
-	font-family: v.$font-primary, v.$font-backup;
+	font-family: v.$font-primary, v.$font-fallback;
 }
 
 /* Remove default margin */

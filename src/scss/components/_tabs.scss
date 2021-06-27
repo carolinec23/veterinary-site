@@ -12,7 +12,7 @@
 }
 
 .tabsItem__title {
-	padding: 14px 22px;
+	padding: 10px 14px;
 	color: v.$gray-dark;
 
 	&.active {
@@ -25,12 +25,17 @@
 		cursor: pointer;
 		border-bottom: solid 2px v.$red;
 	}
+
+	@include m.sm {
+		padding: 14px 22px;
+	}
 }
 
 .tabsItem__content {
 	@include m.flex-center;
 	flex-direction: column;
 	color: v.$gray-light;
+	text-align: justify;
 
 	img {
 		width: 100%;
@@ -39,6 +44,18 @@
 	}
 
 	p {
-		padding: 18px 22px;
+		padding: 10px 14px;
+	}
+
+	@include m.sm {
+		p {
+			padding: 14px 18px;
+		}
+	}
+
+	@include m.md {
+		p {
+			padding: 18px 22px;
+		}
 	}
 }
